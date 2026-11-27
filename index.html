@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Arunika Coffee — The Premium Standard in Coffee</title>
+<meta name="description" content="Arunika Coffee: biji kopi pilihan, coffee products, dan pengalaman menikmati kopi premium.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
+<link href="https://api.fontshare.com/v2/css?f[]=switzer@300,400,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script>document.documentElement.classList.add("js")</script>
+</head>
+<body>
+
+<!-- floating image for offer hover -->
+<div class="offer-float" id="offerFloat"><div class="offer-float-inner"></div></div>
+
+<!-- HEADER -->
+<header class="header" id="header">
+  <div class="header-left">
+    <button class="menu-btn" id="menuBtn" aria-label="Menu"><span></span><span></span></button>
+    <div class="lang"><a class="active" href="#">ID</a><span>/</span><a href="#">EN</a></div>
+    <div class="clock">JKT <span id="clock">00:00</span></div>
+  </div>
+  <a href="#" class="logo">ARUNIKA</a>
+  <div class="header-right">
+    <a href="#shop" class="link-u hide-sm">Shop</a>
+    <a href="#contact" class="btn btn-glass btn-sm">Contact</a>
+  </div>
+</header>
+
+<!-- MENU OVERLAY -->
+<nav class="menu" id="menu">
+  <div class="menu-inner">
+    <ul class="menu-list">
+      <li><a href="#origins"><i>(1)</i>Origins</a></li>
+      <li><a href="#offer"><i>(2)</i>Products</a></li>
+      <li><a href="#shop"><i>(3)</i>Shop</a></li>
+      <li><a href="#events"><i>(4)</i>Experience</a></li>
+      <li><a href="#journal"><i>(5)</i>Journal</a></li>
+    </ul>
+    <div class="menu-side">
+      <p class="eyebrow">Roastery & Tasting Room</p>
+      <p>Jl. Senopati No. 21<br>Jakarta Selatan</p>
+      <p class="eyebrow">Open</p>
+      <p>Setiap hari · 07.00 – 22.00</p>
+      <div class="socials"><a href="#">Instagram</a><a href="#">TikTok</a><a href="#">Spotify</a></div>
+    </div>
+  </div>
+</nav>
+
+<main>
+<!-- HERO -->
+<section class="hero" id="hero">
+  <div class="hero-glow"></div>
+  <div class="hero-grain"></div>
+
+  <!-- Coffee pour animation -->
+  <div class="pour" id="pour" aria-hidden="true">
+    <svg viewBox="0 0 300 700" preserveAspectRatio="xMidYMax meet">
+      <defs>
+        <linearGradient id="streamGrad" x1="0" x2="1">
+          <stop offset="0" stop-color="#2a170b"/>
+          <stop offset=".45" stop-color="#7a4a2a"/>
+          <stop offset="1" stop-color="#2a170b"/>
+        </linearGradient>
+        <linearGradient id="coffeeGrad" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#4b2a16"/>
+          <stop offset=".35" stop-color="#2a160a"/>
+          <stop offset="1" stop-color="#120904"/>
+        </linearGradient>
+        <linearGradient id="cremaGrad" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#c8925f"/>
+          <stop offset="1" stop-color="#8a5532"/>
+        </linearGradient>
+        <linearGradient id="glassFill" x1="0" x2="1">
+          <stop offset="0" stop-color="#fdfaf5" stop-opacity=".10"/>
+          <stop offset=".5" stop-color="#fdfaf5" stop-opacity=".02"/>
+          <stop offset="1" stop-color="#fdfaf5" stop-opacity=".08"/>
+        </linearGradient>
+        <radialGradient id="shadowGrad">
+          <stop offset="0" stop-color="#c8925f" stop-opacity=".28"/>
+          <stop offset="1" stop-color="#c8925f" stop-opacity="0"/>
+        </radialGradient>
+        <clipPath id="glassClip">
+          <path d="M88 442 L212 442 L200.5 666 Q199.5 677 189 677 L111 677 Q100.5 677 99.5 666 Z"/>
+        </clipPath>
+      </defs>
+
+      <ellipse class="glass-shadow" cx="150" cy="684" rx="110" ry="12" fill="url(#shadowGrad)"/>
+      <rect id="stream" x="147.6" y="-40" width="4.8" height="0" rx="2.4" fill="url(#streamGrad)"/>
+
+      <path class="glass-body" d="M85 440 L215 440 L203 668 Q202 680 190 680 L110 680 Q98 680 97 668 Z" fill="url(#glassFill)"/>
+      <g clip-path="url(#glassClip)">
+        <g id="liquid">
+          <g id="waves">
+            <path id="crema" fill="url(#cremaGrad)"/>
+            <path id="coffee" fill="url(#coffeeGrad)"/>
+          </g>
+          <circle class="bubble" cx="140" cy="30" r="1.6"/>
+          <circle class="bubble" cx="162" cy="50" r="1.2"/>
+          <circle class="bubble" cx="125" cy="70" r="1"/>
+          <circle class="bubble" cx="175" cy="40" r="1.4"/>
+        </g>
+        <ellipse id="splash" cx="150" cy="0" rx="9" ry="2.2" fill="#d8a879" opacity="0"/>
+      </g>
+      <path class="glass-line" pathLength="1" d="M85 440 L215 440 L203 668 Q202 680 190 680 L110 680 Q98 680 97 668 Z"/>
+      <path class="glass-line glass-base" pathLength="1" d="M104 672 L196 672"/>
+      <path class="glass-shine" pathLength="1" d="M95 462 L105.5 650"/>
+      <path class="glass-shine thin" pathLength="1" d="M203 470 L196 600"/>
+
+      <path class="steam" pathLength="1" d="M135 425 C122 400 148 385 134 358 C122 334 146 318 136 292"/>
+      <path class="steam" pathLength="1" d="M152 430 C140 404 166 390 152 362 C140 338 164 322 154 296"/>
+      <path class="steam" pathLength="1" d="M168 425 C156 402 182 388 168 362 C156 340 178 326 170 300"/>
+    </svg>
+    <div class="pour-status"><span>Brewing your cup</span><span id="pourPct">0%</span></div>
+  </div>
+
+  <!-- Floating coffee beans -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <radialGradient id="beanGrad" cx=".35" cy=".28" r=".85">
+        <stop offset="0" stop-color="#9a6238"/>
+        <stop offset=".55" stop-color="#4f2c16"/>
+        <stop offset="1" stop-color="#1b0d05"/>
+      </radialGradient>
+      <symbol id="bean" viewBox="0 0 60 80">
+        <ellipse cx="30" cy="40" rx="26" ry="36" fill="url(#beanGrad)"/>
+        <path d="M31 7 C19 22 42 34 30 48 C21 59 34 68 30 74" stroke="#160903" stroke-width="3.6" fill="none" stroke-linecap="round"/>
+        <ellipse cx="19" cy="24" rx="5" ry="10" fill="#fff" opacity=".09" transform="rotate(-18 19 24)"/>
+      </symbol>
+    </defs>
+  </svg>
+  <div class="beans" id="beans" aria-hidden="true"></div>
+
+  <div class="hero-top">
+    <p class="hero-tag hero-fade">We source, roast and serve the finest side of Indonesian coffee.</p>
+    <div class="hero-stats hero-fade">
+      <p><strong>27+</strong> Single-origin dari Nusantara</p>
+      <p><strong>3x</strong> Juara Roaster Nasional</p>
+    </div>
+  </div>
+
+  <div class="hero-bottom">
+    <h1 class="hero-title">
+      <span class="line"><span>The premium</span></span>
+      <span class="line"><span>standard</span></span>
+      <span class="line"><span><em>in coffee.</em></span></span>
+    </h1>
+    <div class="hero-actions">
+      <p class="hero-fade">Biji kopi pilihan, dipanggang dalam batch kecil setiap minggu.</p>
+      <div class="hero-btns">
+        <a href="#shop" class="btn btn-light hero-fade magnetic">Shop the beans</a>
+        <a href="#events" class="btn btn-glass hero-fade magnetic">Book a tasting</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-marquee">
+    <div class="marquee-track">
+      <span>Gayo /</span><span>Kintamani /</span><span>Toraja /</span><span>Flores Bajawa /</span><span>Java Preanger /</span><span>Papua Wamena /</span><span>Kerinci /</span>
+      <span>Gayo /</span><span>Kintamani /</span><span>Toraja /</span><span>Flores Bajawa /</span><span>Java Preanger /</span><span>Papua Wamena /</span><span>Kerinci /</span>
+    </div>
+  </div>
+</section>
+
+<!-- ORIGINS (case-style) -->
+<section class="origins" id="origins">
+  <div class="section-head">
+    <p class="eyebrow">(Origins)</p>
+    <a href="#shop" class="link-u">View all beans</a>
+  </div>
+
+  <article class="case">
+    <div class="case-img"><img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1447933601403-0c6688de566e?w=1800&q=80" alt=""></div>
+    <div class="case-info">
+      <h2 class="case-title">A cup that tastes like the highlands</h2>
+      <div class="case-meta"><span>Aceh Gayo — Natural</span><span>Jasmine, Blackberry, Dark Chocolate</span></div>
+    </div>
+  </article>
+
+  <div class="case-grid">
+    <article class="case">
+      <div class="case-img tall"><img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1559056199-641a0ac8b55e?w=1200&q=80" alt=""></div>
+      <div class="case-info">
+        <h2 class="case-title sm">Born from volcanic soil</h2>
+        <div class="case-meta"><span>Bali Kintamani — Honey</span><span>Orange, Brown Sugar</span></div>
+      </div>
+    </article>
+    <article class="case offset">
+      <div class="case-img tall"><img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?w=1200&q=80" alt=""></div>
+      <div class="case-info">
+        <h2 class="case-title sm">Slow roasted, deeply rooted</h2>
+        <div class="case-meta"><span>Toraja Sapan — Washed</span><span>Cedar, Spice, Cacao</span></div>
+      </div>
+    </article>
+  </div>
+
+  <article class="case">
+    <div class="case-img"><img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=1800&q=80" alt=""></div>
+    <div class="case-info">
+      <h2 class="case-title">Where every ritual begins</h2>
+      <div class="case-meta"><span>Arunika Tasting Room — Jakarta</span><span>Espresso Bar, Slow Bar, Cupping Lab</span></div>
+    </div>
+  </article>
+</section>
+
+<!-- INTRO -->
+<section class="intro">
+  <p class="eyebrow">(About)</p>
+  <p class="intro-text split">Arunika menghadirkan biji kopi pilihan dari petani terbaik Nusantara — dipanggang dengan presisi dalam batch kecil, untuk menghadirkan pengalaman menikmati kopi yang tenang, jujur, dan tak terlupakan.</p>
+</section>
+
+<!-- OFFERINGS -->
+<section class="offer" id="offer">
+  <div class="offer-row">
+    <span class="offer-num">(1)</span>
+    <h3 class="offer-title">Selected Beans</h3>
+    <p class="offer-desc">Single-origin & micro-lot dari kebun yang kami kunjungi langsung. Traceable hingga ke petani.</p>
+    <div class="offer-img"><img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1610889556528-9a770e32642f?w=600&q=80" alt=""></div>
+  </div>
+  <div class="offer-row">
+    <span class="offer-num">(2)</span>
+    <h3 class="offer-title">Coffee Products</h3>
+    <p class="offer-desc">Drip bag, cold brew concentrate, capsule, hingga signature blend untuk setiap ritme hari.</p>
+    <div class="offer-img"><img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1587734195503-904fca47e0e9?w=600&q=80" alt=""></div>
+  </div>
+  <div class="offer-row">
+    <span class="offer-num">(3)</span>
+    <h3 class="offer-title">Brew & Craft</h3>
+    <p class="offer-desc">Peralatan seduh pilihan, kelas manual brew, dan panduan seduh dari head roaster kami.</p>
+    <div class="offer-img"><img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=600&q=80" alt=""></div>
+  </div>
+  <div class="offer-row">
+    <span class="offer-num">(4)</span>
+    <h3 class="offer-title">The Experience</h3>
+    <p class="offer-desc">Tasting room, private cupping, dan omakase coffee — kopi sebagai sebuah perjalanan.</p>
+    <div class="offer-img"><img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1453614512568-c4024d13c247?w=600&q=80" alt=""></div>
+  </div>
+</section>
+
+<!-- SHOP -->
+<section class="shop" id="shop">
+  <div class="section-head">
+    <h2 class="h-big split">The Collection</h2>
+    <a href="#" class="link-u">Shop all</a>
+  </div>
+  <div class="products">
+    <a href="#" class="product reveal">
+      <div class="p-img"><img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1559496417-e7f25cb247f3?w=900&q=80" alt=""><span class="p-badge">New harvest</span></div>
+      <div class="p-info"><div><h4>Gayo Wine Natural</h4><p>Filter · 200g</p></div><span>Rp 185.000</span></div>
+    </a>
+    <a href="#" class="product reveal">
+      <div class="p-img"><img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1511920170033-f8396924c348?w=900&q=80" alt=""></div>
+      <div class="p-info"><div><h4>Arunika House Blend</h4><p>Espresso · 250g</p></div><span>Rp 165.000</span></div>
+    </a>
+    <a href="#" class="product reveal">
+      <div class="p-img"><img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1517701604599-bb29b565090c?w=900&q=80" alt=""></div>
+      <div class="p-info"><div><h4>Cold Brew Concentrate</h4><p>Bottle · 1L</p></div><span>Rp 145.000</span></div>
+    </a>
+    <a href="#" class="product reveal">
+      <div class="p-img"><img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1497935586351-b67a49e012bf?w=900&q=80" alt=""></div>
+      <div class="p-info"><div><h4>Drip Bag Discovery</h4><p>Box · 10 pcs</p></div><span>Rp 120.000</span></div>
+    </a>
+  </div>
+</section>
+
+<!-- TRUST / DARK -->
+<section class="trust">
+  <div class="trust-marquee">
+    <div class="marquee-track slow">
+      <span>Specialty Grade 85+</span><span>✦</span><span>Direct Trade</span><span>✦</span><span>Small Batch Roasted</span><span>✦</span><span>Roasted Weekly</span><span>✦</span>
+      <span>Specialty Grade 85+</span><span>✦</span><span>Direct Trade</span><span>✦</span><span>Small Batch Roasted</span><span>✦</span><span>Roasted Weekly</span><span>✦</span>
+    </div>
+  </div>
+  <div class="trust-body">
+    <h3 class="h-big split">Trusted by the finest cafés & hotels</h3>
+    <div class="trust-side">
+      <p>Lebih dari 120 kafe, restoran, dan hotel bintang lima mempercayakan biji kopinya kepada Arunika. Kami mendampingi dari pemilihan profil roasting hingga pelatihan barista.</p>
+      <a href="#contact" class="btn btn-light">Wholesale inquiry</a>
+    </div>
+  </div>
+  <div class="logos">
+    <span>MAISON</span><span>Hotel Kaya</span><span>NORTE</span><span>Lumière</span><span>SAGA&nbsp;&amp;&nbsp;CO</span><span>Rumah Teduh</span>
+  </div>
+</section>
+
+<!-- EVENTS -->
+<section class="events" id="events">
+  <div class="section-head">
+    <h2 class="h-big split">Join our coffee experiences</h2>
+  </div>
+  <div class="event-list">
+    <a href="#" class="event"><span class="e-date">06 Des</span><span class="e-title">Public Cupping: New Harvest Gayo</span><span class="e-place">Senopati, Jakarta</span><span class="e-arrow">→</span></a>
+    <a href="#" class="event"><span class="e-date">13 Des</span><span class="e-title">Manual Brew Masterclass</span><span class="e-place">Senopati, Jakarta</span><span class="e-arrow">→</span></a>
+    <a href="#" class="event"><span class="e-date">20 Des</span><span class="e-title">Coffee & Chocolate Pairing Night</span><span class="e-place">Canggu, Bali</span><span class="e-arrow">→</span></a>
+    <a href="#" class="event"><span class="e-date">11 Jan</span><span class="e-title">Origin Trip: Kintamani Harvest</span><span class="e-place">Kintamani, Bali</span><span class="e-arrow">→</span></a>
+    <a href="#" class="event"><span class="e-date">25 Jan</span><span class="e-title">Omakase Coffee — 7 Course</span><span class="e-place">Senopati, Jakarta</span><span class="e-arrow">→</span></a>
+  </div>
+</section>
+
+<!-- ABOUT TEASER -->
+<section class="about">
+  <div class="about-img"><img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1504630083234-14187a9df0f5?w=1400&q=80" alt=""></div>
+  <div class="about-text">
+    <p class="eyebrow">(Our story)</p>
+    <h3 class="h-mid split">Arunika berarti cahaya matahari pertama — saat terbaik untuk secangkir kopi.</h3>
+    <p>Berawal dari sebuah roaster kecil di garasi tahun 2016, kini kami bekerja sama dengan lebih dari 40 kelompok tani di 9 provinsi.</p>
+    <a href="#" class="link-u">About us</a>
+  </div>
+</section>
+
+<!-- JOURNAL -->
+<section class="journal" id="journal">
+  <div class="section-head">
+    <h2 class="h-big split">Journal</h2>
+    <a href="#" class="link-u">View all articles</a>
+  </div>
+  <div class="articles">
+    <a href="#" class="article reveal"><div class="a-img"><img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1498804103079-a6351b050096?w=900&q=80" alt=""></div><p class="a-cat">Brew Guide</p><h4>Rasio sempurna untuk V60 di rumah</h4></a>
+    <a href="#" class="article reveal"><div class="a-img"><img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1506372023823-741c83b836fe?w=900&q=80" alt=""></div><p class="a-cat">Origins</p><h4>Mengenal proses natural, honey & washed</h4></a>
+    <a href="#" class="article reveal"><div class="a-img"><img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1524350876685-274059332603?w=900&q=80" alt=""></div><p class="a-cat">Culture</p><h4>Ritual kopi pagi dari berbagai penjuru dunia</h4></a>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta" id="contact">
+  <h2 class="cta-title split">We'd love to brew your next cup.</h2>
+  <div class="cta-btns">
+    <a href="#shop" class="btn btn-dark">Shop the beans</a>
+    <a href="#events" class="btn btn-outline">Book a tasting</a>
+  </div>
+</section>
+</main>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-grid">
+    <div><p class="eyebrow">Shop</p><a href="#">Single Origin</a><a href="#">Blends</a><a href="#">Coffee Products</a><a href="#">Brew Gear</a></div>
+    <div><p class="eyebrow">Experience</p><a href="#">Tasting Room</a><a href="#">Classes</a><a href="#">Origin Trips</a><a href="#">Wholesale</a></div>
+    <div><p class="eyebrow">Company</p><a href="#">About</a><a href="#">Journal</a><a href="#">Careers</a><a href="#">Contact</a></div>
+    <div class="newsletter"><p class="eyebrow">Newsletter</p><p>Kabar panen terbaru & rilis micro-lot, langsung ke inbox kamu.</p>
+      <form onsubmit="event.preventDefault();this.querySelector('button').textContent='Terima kasih ✓'"><input type="email" placeholder="Email address" required><button class="btn btn-light btn-sm">Subscribe</button></form>
+    </div>
+  </div>
+  <div class="footer-bottom"><span>© 2026 Arunika Coffee Roasters</span><span>Instagram · TikTok · Spotify</span><span>Privacy · Terms</span></div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+<script src="main.js"></script>
+</body>
+</html>
